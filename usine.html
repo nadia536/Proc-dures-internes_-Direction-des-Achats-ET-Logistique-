@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procédures - Direction Achat & Logistique</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --achat-color: #e67e22;
+            --logistique-color: #2980b9;
+            --bg-color: #f0f2f5;
+            --text-color: #333;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-color);
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6;
+        }
+
+        .container { 
+            max-width: 1100px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
+
+        header { 
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white; 
+            padding: 50px 20px; 
+            text-align: center; 
+            border-radius: 12px; 
+            margin-bottom: 40px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
+        header p { margin: 15px 0 0; opacity: 0.9; font-size: 1.2em; font-weight: 300; }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+
+        .panel {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .panel-achat .panel-header { background-color: var(--achat-color); }
+        .panel-logistique .panel-header { background-color: var(--logistique-color); }
+
+        .panel-header h2 { margin: 0; font-size: 1.5em; }
+        .icon { font-size: 1.8em; }
+
+        .panel-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        ul { list-style: none; padding: 0; margin: 0; }
+        
+        li { 
+            margin-bottom: 15px; 
+            padding: 12px; 
+            border-radius: 8px; 
+            background: #fff; 
+            border: 1px solid #edf2f7;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        li:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            border-color: #cbd5e0;
+        }
+
+        .panel-achat li:hover { border-left: 4px solid var(--achat-color); }
+        .panel-logistique li:hover { border-left: 4px solid var(--logistique-color); }
+
+        .procedure-code { 
+            font-weight: bold; 
+            color: #a0aec0; 
+            font-size: 0.8em; 
+            margin-bottom: 4px; 
+            display: block;
+            font-family: monospace;
+        }
+
+        a { 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.95em;
+            display: block;
+        }
+
+        a:hover { color: #000; }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            color: #718096;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📦 Direction Achat & Logistique</h1>
+        <p>Accès rapide aux procédures internes</p>
+    </header>
+
+    <div class="grid-layout">
+        <!-- VOLET ACHAT -->
+        <div class="panel panel-achat">
+            <div class="panel-header">
+                <span class="icon">🛒</span>
+                <h2>Volet Achat</h2>
+            </div>
+            <div class="panel-content">
+                <ul>
+                    <li><span class="procedure-code">PR00007</span><a href="Procedures_ Usine/Precedure interne d'un acheteur.pdf" target="_blank">PROCEDURE INTERNE D'UN ACHETEUR</a></li>
+                    <li><span class="procedure-code">PR00054</span><a href="Procedures_ Usine/Procedure de vente des biens de la societe.pdf" target="_blank">PROCEDURE DE VENTE DES BIENS DE LA SOCIETE</a></li>
+                    <li><span class="procedure-code">PR00100</span><a href="Procedures_ Usine/PROCEDURE INTERNE DE GESTION DES DEMANDES AVEC BON DE COMMANDE.pdf" target="_blank">GESTION DES DEMANDES AVEC BON DE COMMANDE</a></li>
+                    <li><span class="procedure-code">PR00115</span><a href="Procedures_ Usine/PROCÉDURE GÉNÉRALE D’ACHAT ET DE GESTION DES FOURNISSEURS.pdf" target="_blank">ACHAT ET GESTION DES FOURNISSEURS</a></li>
+                    <li><span class="procedure-code">PR00164</span><a href="Procedures_ Usine/PROCÉDURE D'ANNULATION DES DOCUMENTS ADMINISTRATIFS.pdf" target="_blank">ANNULATION DES DOCUMENTS ADMINISTRATIFS</a></li>
+                    <li><span class="procedure-code">PR00138</span><a href="Procedures_ Usine/PROCEDURE INTERNE RELATIVE AU POSTE AUDITEUR.pdf" target="_blank">POSTE AUDITEUR</a></li>
+                    <li><span class="procedure-code">PR00139</span><a href="Procedures_ Usine/PROCEDURE INTERNE RELATIVE AU POSTE RESPONSABLE D'OPTIMISATION.pdf" target="_blank">RESPONSABLE D'OPTIMISATION</a></li>
+                    <li><span class="procedure-code">PR00048</span><a href="Procedures_ Usine/PROCEDURE INTERNE RELATIVE AU POSTE DIRECTEUR ACHAT ET LOGISTIQUE.pdf" target="_blank">DIRECTEUR ACHAT ET LOGISTIQUE</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- VOLET LOGISTIQUE -->
+        <div class="panel panel-logistique">
+            <div class="panel-header">
+                <span class="icon">🚚</span>
+                <h2>Volet Logistique</h2>
+            </div>
+            <div class="panel-content">
+                <ul>
+                    <li><span class="procedure-code">PR00152</span><a href="Procedures_ Usine/Réception des Marchandises.pdf" target="_blank">RÉCEPTION DES MARCHANDISES</a></li>
+                    <li><span class="procedure-code">PR00008</span><a href="Procedures_ Usine/PROCEDURE INTERNE D'UN AGENT ADMINISTRATION LOGISTIQUE.pdf" target="_blank">AGENT ADMINISTRATION LOGISTIQUE</a></li>
+                    <li><span class="procedure-code">PR00016</span><a href="Procedures_ Usine/PROCEDURE INTERNE D'UN ASSISTANT LOGISTIQUE.pdf" target="_blank">ASSISTANT LOGISTIQUE</a></li>
+                    <li><span class="procedure-code">PR00092</span><a href="Procedures_ Usine/CONDUCTEUR CHAUDIERE.pdf" target="_blank">CONDUCTEUR CHAUDIERE</a></li>
+                    <li><span class="procedure-code">PR00028</span><a href="Procedures_ Usine/PROCEDURE INTERNE D'UN CHEF DE PARC.pdf" target="_blank">CHEF DE PARC</a></li>
+                    <li><span class="procedure-code">PR00078</span><a href="Procedures_ Usine/OUVRIER PARC.pdf" target="_blank">OUVRIER PARC</a></li>
+                    <li><span class="procedure-code">PR00104</span><a href="Procedures_ Usine/SUPERVISEUR DU PARC.pdf" target="_blank">SUPERVISEUR DU PARC</a></li>
+                    <li><span class="procedure-code">PR00061</span><a href="Procedures_ Usine/AIDE CHAUFFEUR.pdf" target="_blank">AIDE CHAUFFEUR</a></li>
+                    <li><span class="procedure-code">PR00062</span><a href="Procedures_ Usine/AIDE CHAFFEUR CAMION.pdf" target="_blank">AIDE CHAUFFEUR CAMION</a></li>
+                    <li><span class="procedure-code">PR00064</span><a href="Procedures_ Usine/CHAUFFEUR CAMION.pdf" target="_blank">CHAUFFEUR CAMION</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        &copy; 2026 - Direction Usine - Système de Gestion Documentaire
+    </div>
+</div>
+
+</body>
+</html>
